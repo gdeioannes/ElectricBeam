@@ -11,9 +11,13 @@ public class UIManager : MonoBehaviour {
 	private float lifeNum=3;
 	public GameObject endPanel;
 	public GameObject startPanel;
+
+	public GameObject vrBtn;
+	public GameObject optionBtn;
+
 	// Use this for initialization
 	void Awake () {
-
+		hidePanel();
 
 		if(_instance != null && _instance != this)
 		{
@@ -62,6 +66,16 @@ public class UIManager : MonoBehaviour {
 	public void startGame(){
 		Time.timeScale=1;
 		startPanel.SetActive(false);
+	}
+
+	public void showPanel(){
+		optionBtn.SetActive(true);
+		vrBtn.SetActive(false);
+	}
+
+	public void hidePanel(){
+		optionBtn.SetActive(false);
+		vrBtn.SetActive(true);
 	}
 
 }

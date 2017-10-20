@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour {
 
 	private Transform startMarker;
 	public Transform endMarker;
-	private float speed = 0.03F;
+	private float speed = 0.02F;
 	private float startTime;
 	private float journeyLength;
 	public  GameObject particleExplode;
